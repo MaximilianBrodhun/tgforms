@@ -1,0 +1,10 @@
+<div class="form-group tgforms:textarea {{ rdf:Property }}" data-tgforms-type="tgforms:textarea" data-tgforms-name="{{ rdf:Property }}">
+  <label>
+    <span class="label">{{ rdfs:label }}</span>
+      {{#rdfs:comment}}
+  		<span title="{{.}}" class="glyphicon glyphicon-info-sign icon-info"></span>
+  	  {{/rdfs:comment}}
+    <textarea class="form-control" rows="5"></textarea>
+  </label>
+
+</div>

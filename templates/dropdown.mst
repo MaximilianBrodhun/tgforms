@@ -1,0 +1,26 @@
+<div class="form-group tgforms:dropdown {{ rdf:Property }}" data-tgforms-type="tgforms:dropdown" data-tgforms-name="{{ rdf:Property }}">
+  <span class="label">{{ rdfs:label }}</span>
+  {{#rdfs:comment}}
+  <span title="{{.}}" class="glyphicon glyphicon-info-sign icon-info"></span>
+  {{/rdfs:comment}}
+  <div class="btn-group">
+  
+	{{#tgforms:isMandatory}}  
+    	<button id="{{rdf:Property}}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" required>
+      		<span class="value">{{ tgforms:hasDefault }}</span><span class="caret"></span>
+    	</button>
+    {{/tgforms:isMandatory}}
+    {{^tgforms:isMandatory}}
+    	<button id="{{rdf:Property}}" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      		<span class="value">{{ tgforms:hasDefault }}</span><span class="caret"></span>
+    	</button>
+    {{/tgforms:isMandatory}}    
+    
+    <ul class="dropdown-menu dropdown-menu" role="menu">
+      {{#tgforms:hasOption}}
+        <li><a href="javascript:return false">{{.}}</a></li>
+      {{/tgforms:hasOption}}
+    </ul>
+  </div>
+</div>
+

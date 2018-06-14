@@ -1,0 +1,33 @@
+<div class="form-group tgforms:text {{ rdf:Property }}" data-tgforms-type="tgforms:text" data-tgforms-name="{{ rdf:Property }}">
+  <label>
+    <span class="label">{{ rdfs:label }}</span>
+    
+    {{#rdfs:comment}}
+     <span title="{{.}}" class="glyphicon glyphicon-info-sign icon-info"></span>
+    {{/rdfs:comment}}
+    
+    {{#tgforms:hasDefault}}
+    	<input type="text" class="form-control" value="{{.}}">
+    {{/tgforms:hasDefault}}
+    
+  
+    {{#tgforms:hasFieldFunction}}
+    	{{#tgforms:isMandatory}}    	
+    		<input type="text" onblur="{{.}}" class="{{rdf:Property}} form-control" required>
+    	{{/tgforms:isMandatory}}
+    	{{^tgforms:isMandatory}}
+    		<input type="text" onblur="{{.}}" class="{{rdf:Property}} form-control" >
+    	{{/tgforms:isMandatory}}
+    {{/tgforms:hasFieldFunction}}
+    {{^tgforms:hasFieldFunction}}
+       	{{#tgforms:isMandatory}}
+    		<input id="{{rdf:Property}}" type="text" class="form-control" required>
+    	{{/tgforms:isMandatory}}
+    	{{^tgforms:isMandatory}}
+    		<input id="{{rdf:Property}}" type="text" class="form-control">
+    	{{/tgforms:isMandatory}}    	
+    {{/tgforms:hasFieldFunction}}
+
+  </label>
+  <span>
+</div>

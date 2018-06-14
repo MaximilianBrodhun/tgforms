@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix tgforms: <http://github.com/hriebl/tgForms#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+
+###############
+### Classes ###
+###############
+
+tgforms:form a rdfs:Class.
+tgforms:input a rdfs:Class.
+
+tgforms:button a tgforms:input.
+tgforms:buttonFindingPlace a tgforms:input.
+tgforms:checkbox a tgforms:input.
+tgforms:dropdown a tgforms:input.
+tgforms:text a tgforms:input.
+tgforms:textarea a tgforms:input.
+
+
+##################
+### Properties ###
+##################
+
+tgforms:belongsToForm a rdf:Property;
+  rdfs:range tgforms:form.
+
+tgforms:hasInput a rdf:Property;
+  rdfs:range tgforms:input.
+
+tgforms:hasDefault a rdf:Property;
+  rdfs:range xsd:string.
+
+tgforms:hasOption a rdf:Property;
+  rdfs:range xsd:string.
+
+tgforms:hasPriority a rdf:Property;
+  rdfs:range xsd:integer.
+
+tgforms:isRepeatable a rdf:Property;
+  rdfs:range xsd:boolean.
+
+tgforms:represents a rdf:Property;
+  rdfs:range rdfs:Class.
+  
+tgforms:isMandatory a rdf:Property;
+  rdfs:range xsd:boolean.

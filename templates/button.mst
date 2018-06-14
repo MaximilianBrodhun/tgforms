@@ -1,0 +1,31 @@
+<div class="form-group tgforms:button {{ rdf:Property }}" data-tgforms-type="tgforms:button" data-tgforms-name="{{ rdf:Property }}">
+  <span class="label">{{ rdfs:label }}</span>
+  {{#rdfs:comment}}
+  <span title="{{.}}" class="glyphicon glyphicon-info-sign icon-info"></span>
+  {{/rdfs:comment}}
+  <div>
+    <span class="value">{{ tgforms:hasDefault }}</span>
+    
+    {{#tgforms:buttonID}}
+    	{{#tgforms:isMandatory}}
+			<button type="button" class="btn btn-default formularOp" id="{{tgforms:buttonID}}" required>Choose</button>
+	    	<button type="button" class="btn btn-default {{tgforms:buttonID}}" id="removeFormular" disabled="disabled">Remove</button>
+	    {{/tgforms:isMandatory}}
+	    {{^tgforms:isMandatory}}
+	    	<button type="button" class="btn btn-default formularOp" id="{{tgforms:buttonID}}">Choose</button>
+	    	<button type="button" class="btn btn-default {{tgforms:buttonID}}" id="removeFormular" disabled="disabled">Remove</button>
+	    {{/tgforms:isMandatory}}
+	{{/tgforms:buttonID}}	
+    {{^tgforms:buttonID}}
+    	{{#tgforms:isMandatory}}
+    		<button type="button" class="btn btn-default searchOp" required>Choose</button>
+    		<button type="button" class="btn btn-default" id="removeContent" disabled="disabled">Remove</button>
+    	{{/tgforms:isMandatory}}
+    	{{^tgforms:isMandatory}}
+    	    <button type="button" class="btn btn-default searchOp">Choose</button>
+    		<button type="button" class="btn btn-default" id="removeContent" disabled="disabled">Remove</button>
+    	{{/tgforms:isMandatory}}
+    {{/tgforms:buttonID}}
+    
+  </div>
+</div>

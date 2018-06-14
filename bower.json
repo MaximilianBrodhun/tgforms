@@ -1,0 +1,24 @@
+{
+  "name": "tgForms",
+  "description": "Generate HTML forms from Turtle RDF representations",
+  "version": "0.1",
+  "main": "build/tgForms.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "compiler.jar"
+  ],
+  "keywords": [
+    "forms",
+    "turtle"
+  ],
+  "authors": [{
+    "name": "Hannes Riebl"
+  }],
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "mustache": "~0.8.2",
+    "n3js": "~0.2.7"
+  },
+  "private": true
+}

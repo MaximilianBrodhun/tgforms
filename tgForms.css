@@ -1,0 +1,203 @@
+form.tgForms fieldset{
+  border: 2px solid #000000; 
+  border-radius: 6px;
+  margin-bottom: 20px;
+  margin-right: 15px;
+}
+
+form.tgForms * fieldset{
+  border: 2px solid #000000; 
+  border-radius: 6px;
+  margin-bottom: 20px;
+  margin-right: 15px;
+  counter-reset:step;
+  background-color: #f1f1f1;
+}
+
+img#ajaxloader {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+li.careful {
+    color:red;
+}
+
+form.tgForms * fieldset * fieldset{
+  border: 2px solid #000000; 
+  border-radius: 6px;
+  margin-bottom: 20px;
+  margin-right: 15px;
+  counter-reset:step;
+  background-color: #e1e1e1;
+}
+
+form.tgForms * fieldset * fieldset * fieldset{
+  border: 2px solid #000000; 
+  border-radius: 6px;
+  margin-bottom: 20px;
+  margin-right: 15px;
+  counter-reset:step;
+  background-color: #d1d1d1;
+}
+
+div.modal-content{
+    height:auto;
+}
+
+form.tgForms legend{
+   padding-top: 20px;
+   padding-left: 20px;
+   margin-left: 20px;
+   width: 10%;
+}
+
+form.tgForms label {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+form.tgForms span.label {
+  color: black;
+  font-size: 14px;
+  padding-left: 20px;
+  
+}
+
+form.tgForms span.repeat,
+form.tgForms span.delete {
+  color: #428bca;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+form.tgForms span.mandatory {
+  color: #CC0033;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+form.tgForms div.tgforms\:button div,
+form.tgForms div.tgforms\:checkbox input{
+  margin-left: 20px;
+}
+
+
+form.tgForms div.tgforms\:dropdown div{
+  margin-left:20px;
+}
+
+div#content {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+div#wrapper {
+  margin-left: 10px;
+  margin-right: 10px; 
+}
+
+table td img {
+  margin-right:10px;
+  padding-right:10px;
+}
+
+.modal-description {
+    color: red;
+}
+
+#tikalCarousel h1{
+    font-size: 4em;
+    color: #2C4770;
+}
+
+.geoBrowser {
+   padding-left: 200px;
+}
+
+.contentBox {
+    border-radius: 25px;
+    width: auto;
+    height: 1000px;
+    text-align:center;    
+    padding-bottom: 50px;
+    margin: 25px 200px 0px 140px; 
+}
+.contentBoxArtefact{
+    background-color: #2C4770;
+    border-radius: 25px;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 25px;
+    float:left;
+    color: #94A0B2;
+    font-size: 12px;
+}
+
+.vocabularyResultFirstLayer{
+    background-color: #2C4770;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 25px;
+    float:left;
+    color: #94A0B2;
+}
+
+.vocabularyResultLayer1{
+    background-color: #7887AB;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 25px;    
+    color: #2C4770;
+    float: right;
+    clear:left;
+}
+
+.vocabularyResultLayerLightBlue{
+    background-color: #7887AB;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 25px;    
+    color: #2C4770;
+    float: right;
+    clear:left;
+}
+
+
+.vocabularyResultLayer2{
+    background-color:#2C4770;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 25px;    
+    color: #7887AB;
+    float: right;
+    clear:left;
+}
+
+.vocabularyResultLayer3{
+    background-color:#7887AB;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 25px;    
+    color: #2C4770;
+    float: right;
+    clear:left;
+}
+
+.vocabularyResultLayer4{
+    background-color:#2C4770;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 25px;    
+    color: #7887AB;
+    float: right;
+    clear:left;
+}
+
+
+span.actorNameForResearch2 {
+  display:inline-block;
+} 
