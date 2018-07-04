@@ -329,46 +329,7 @@ class tgForms
     $('.dropdown-toggle').click((e) ->
        e.preventDefault()
     )
-
-    $('input#idiom\\:identifier').attr('readonly', 'true')
-    $('input#idiom\\:graphNumber').attr('readonly', 'true')
-
-    if(formularDisplayName2[1] == "Source")
-      $('div.dct\\:isReferencedBy').each( ->
-        id = $(this).children().children().last().attr('id')
-        if($('div#' + id + ' button#reloadCitation').size() == 0 )
-          $('div#' + id + ' button#removeContent').after('\n<button type="button" class="btn btn-default" id="reloadCitation">Reload</button>')
-        $('input#dct\\:bibliographicCitation').attr('readonly', 'true')
-      )
-      
-
-    if(formularDisplayName2[1] == "Acquisition" || formularDisplayName2[1] == "Custody" || formularDisplayName2[1] == "Scholarly Discovery" || formularDisplayName2[1] == "Production")
-      $(".idiom\\:activityType").remove()
-      $(".idiom\\:performedBy").remove()
-
-    if(formularDisplayName2[1] == "Artefact Type Assignment")
-        $(".idiom\\:activityType").remove()
-        $(".idiom\\:activityTitle").remove()
-        $(".crm\\:P7_took_place_at").remove()
-        $(".idiom\\:performedBy").remove()
-
-    if(formularDisplayName2[1] == "Part Removal")
-        $(".idiom\\:activityType").remove()
-        parentCheck = $("legend").text()
-
-    if(formularDisplayName2[1] == "Visual Document")
-        $(".crm\\:P62_depicts").remove()
-
-    if(formularDisplayName2[1] == "Non-Epigraphic Group")
-        $(".idiom\\:prefActorAppellation").remove()
-        $(".idiom\\:altActorAppellation").remove()
-
-    if(formularDisplayName2[1] == "Non-Epigraphic Person")
-        $(".idiom\\:prefActorAppellation").remove()
-        $(".idiom\\:altActorAppellation").remove()
-        $(".crm\\:P100i_died_in").remove()
-        $(".crm\\:P98i_was_born").remove()
-    
+   
 
   fillForm: (subject, selector) ->
     triples = store.find(subject, null, null)
@@ -405,26 +366,8 @@ class tgForms
           fieldHTML = fieldHTML.replace(labelSearch, deleteReplace)
           $this.closest("div.form-group").after(fieldHTML)
           $this.closest("div.form-group").next().find("span.value").text(object)          
-          if(object.match(/^textgrid:/) || object.match(/^http:\/\/idiom-projekt.de\/voc/))              
-              getTitleInsteadOfUri(object, escapedName, $this)
         else          
           $this.find("span.value").text(object)
-          if(escapedName == "idiom\\:identifier")
-              $('input#idiom\\:identifier').attr('readonly', 'true')
-          if(object.match(/^textgrid:/)  || object.match(/^http:\/\/idiom-projekt.de\/voc/))
-            if(escapedName == "idiomcat\\:hasDigitalImage" || 
-               escapedName == "idiomcat\\:imageInCatalogue")
-              getImageInsteadOfUri(object, $this, false)
-            if(escapedName == "idiomcat\\:isDerivedFrom" || 
-               escapedName == "idiomcat\\:isDividedInto" || 
-               escapedName == "idiomcat\\:isMergedInto" || 
-               escapedName == "idiomcat\\:containsIconicElementsFrom" || 
-               escapedName == "idiomcat\\:sharesDiagnosticElementsWith" || 
-               escapedName == "idiomcat\\:isDistinctAllographTo" || 
-               escapedName == "idiomcat\\:isSameAs")
-              getImageInsteadOfUri(object, $this, true)
-            else
-              getTitleInsteadOfUri(object, escapedName, $this)
 
       if $this.find("textarea")
         if $this.find("textarea").val()
