@@ -4,19 +4,19 @@
 
 tgForms is a JavaScript library to generate HTML forms from Turtle RDF representations. It was originally written for the use with [TextGrid](http://textgrid.de).
 
+## Requirements
+
+CoffeeScript
+npm
+Cake
+
 ## Installation
 
 
 If you have [node.js](http://nodejs.org) and [Bower](http://bower.io) installed, you can get the latest development version of tgForms with the following command:
 
 ```sh
-$ bower install hriebl/tgForms
-```
-
-If you want to download a specific pre-compiled version of tgForms, just append the version number to the command, e.g.:
-
-```sh
-$ bower install hriebl/tgForms#0.1
+$ bower install tgForms
 ```
 
 ## Compilation
